@@ -12,7 +12,24 @@ return {
     config = function()
       vim.g.sonokai_better_performance = 1
       vim.g.sonokai_style = "shusia"
-      vim.cmd.colorscheme("sonokai")
+    end,
+  },
+  {
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- require("nordic").load()
+    end,
+  },
+  {
+    "loctvl842/monokai-pro.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("monokai-pro").setup({
+        filter = "ristretto",
+      })
     end,
   },
 }
