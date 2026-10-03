@@ -57,9 +57,11 @@ return {
   {
     "filipjanevski/0x96f.nvim",
     priority = 1000,
-    config = function()
-      require("0x96f").setup()
-      vim.cmd.colorscheme("0x96f")
-    end,
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
   },
 }
